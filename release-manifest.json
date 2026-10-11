@@ -1,0 +1,30 @@
+{
+  "schema": "agentpolicy-guardd-integration/release-manifest/v1",
+  "branch": "agentpolicy-kmx-orka-ig-guardd-current",
+  "repositories": {
+    "vfalico/kaimahi-public": {
+      "commit": "e3c54bf061a03a6d0e58a6fa254ac4215ea22976",
+      "tree": "806a010f511400e257b56976a100ebef95e667e9",
+      "implementationCommit": "e3c54bf061a03a6d0e58a6fa254ac4215ea22976",
+      "implementationTree": "806a010f511400e257b56976a100ebef95e667e9"
+    },
+    "vfalico/orka-public": {
+      "commit": "cbfb9e34e89ffdd2d4d3aaf62f707e9f41a82e7d",
+      "tree": "02d670cd845f213131335c00aa38fe885daa8150",
+      "implementationCommit": "cbfb9e34e89ffdd2d4d3aaf62f707e9f41a82e7d",
+      "implementationTree": "02d670cd845f213131335c00aa38fe885daa8150"
+    },
+    "vfalico/ig-kmx-guardd-public": {
+      "commit": "f0df7157d164959e21831218475b5e174814ed72",
+      "tree": "874edbbfe9af94b5a6fd70f650387f18ab9e30c8",
+      "implementationCommit": "de8b24619cfd94a7cbc9d5f711911a3d800faa15",
+      "implementationTree": "106b2eeb269f2e244326f725e03e1a4927a20d36"
+    },
+    "vfalico/inspektor-gadget-public": {
+      "commit": "b6dce71343f02269051fdea4e0d463d72c1d5310",
+      "tree": "4c1aa9e94e21aa364660af4c0f531f33a4c7db2e",
+      "implementationCommit": "b6dce71343f02269051fdea4e0d463d72c1d5310",
+      "implementationTree": "4c1aa9e94e21aa364660af4c0f531f33a4c7db2e"
+    }
+  }
+}
