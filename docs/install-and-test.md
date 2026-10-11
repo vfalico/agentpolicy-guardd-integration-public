@@ -3,7 +3,7 @@
 This guide is for a disposable Linux/Kubernetes test environment. Review and
 adapt paths, identities, storage, and key management before any production use.
 
-## 1. Clone the exact integration sources
+## 1. Clone the integration sources and upstream IG
 
 ```bash
 branch=agentpolicy-kmx-orka-ig-guardd-current
@@ -11,7 +11,7 @@ branch=agentpolicy-kmx-orka-ig-guardd-current
 git clone --branch "$branch" https://github.com/vfalico/kaimahi-public.git
 git clone --branch "$branch" https://github.com/vfalico/orka-public.git
 git clone --branch "$branch" https://github.com/vfalico/ig-kmx-guardd-public.git
-git clone https://github.com/vfalico/inspektor-gadget-public.git
+git clone https://github.com/inspektor-gadget/inspektor-gadget.git
 
 git -C kaimahi-public checkout \
   fddda19046bff9b97244c4fbde2b01d8123b086a
@@ -19,22 +19,24 @@ git -C orka-public checkout \
   95effe76f9378b991c97cb86a3d753634afe9004
 git -C ig-kmx-guardd-public checkout \
   ef98009996846e3b54496a6d4061b234ac94c0a6
-git -C inspektor-gadget-public checkout \
-  b6dce71343f02269051fdea4e0d463d72c1d5310
 ```
+
+The integration was accepted with upstream Inspektor Gadget commit
+`b6dce71343f02269051fdea4e0d463d72c1d5310`; current upstream IG may also be
+used.
 
 Record every checked-out commit before building:
 
 ```bash
 for repo in kaimahi-public orka-public ig-kmx-guardd-public \
-  inspektor-gadget-public; do
+  inspektor-gadget; do
   git -C "$repo" rev-parse HEAD
   git -C "$repo" status --short
 done
 ```
 
-All worktrees must be clean. Do not substitute upstream Inspektor Gadget source
-or change canonical Go module paths.
+All worktrees must be clean. Keep the canonical Inspektor Gadget Go module
+paths.
 
 ## 2. Build and test Kaimahi
 
@@ -78,18 +80,19 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests -v
 
 cd gadget
-go work init . ../../inspektor-gadget-public
+go work init . ../../inspektor-gadget
 go work edit \
-  -replace=github.com/inspektor-gadget/inspektor-gadget@v0.0.0=../../inspektor-gadget-public
+  -replace=github.com/inspektor-gadget/inspektor-gadget@v0.0.0=../../inspektor-gadget
 go test ./...
 go vet ./...
 rm go.work
 cd ../..
 ```
 
-Build the owner-fork `ig` executable and OCI gadget archive as described by the
-gadget guide. Record SHA-256 digests for both artifacts. The digest configured
-in guardd and Orka must identify the same gadget.
+Build the `ig` executable and OCI gadget archive as described by the gadget
+guide. Record SHA-256 digests for both artifacts. The OCI manifest digest, not
+the `ig` executable or archive file SHA-256, must be identical in guardd and
+Orka.
 
 ## 4. Generate keys
 
@@ -111,9 +114,9 @@ place the guardd receipt private key in Kubernetes.
 
 ## 5. Install guardd on every test node
 
-Install the Python package, owner-fork `ig` binary, gadget OCI archive, key
-material, service unit, and a completed guardd configuration. Verify every
-artifact digest before starting the service.
+Install the Python package, `ig` binary, gadget OCI archive, key material,
+service unit, and a completed guardd configuration. Verify every artifact
+digest before starting the service.
 
 Install guardd into the path pinned by the packaged unit:
 

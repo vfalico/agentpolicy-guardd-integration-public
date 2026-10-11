@@ -65,10 +65,10 @@ receipt. Incomplete activation never produces a release-eligible receipt.
 
 ### Inspektor Gadget and BPF LSM
 
-The owner-controlled Inspektor Gadget checkout builds and loads the AgentPolicy
-gadget while preserving canonical Go import paths. The gadget compiles the
-strict policy into bounded BPF maps and switches the policy state to active
-only after map population completes.
+The upstream Inspektor Gadget checkout builds and loads the AgentPolicy gadget
+while preserving canonical Go import paths. The gadget compiles the strict
+policy into bounded BPF maps and switches the policy state to active only after
+map population completes.
 
 BPF LSM hooks synchronously return allow or deny. Denial events describe a
 decision already made by the kernel; they are not an asynchronous policy

@@ -8,11 +8,12 @@ separate from import identity:
 - Orka and Kaimahi retain their existing module paths;
 - the gadget retains
   `github.com/inspektor-gadget/inspektor-gadget` imports; and
-- a local Go workspace or temporary vendor tree selects the owner-controlled
-  `vfalico/inspektor-gadget-public` checkout.
+- a local Go workspace or temporary vendor tree selects the upstream
+  Inspektor Gadget checkout.
 
-Do not rewrite canonical module paths. Do not fetch or build this integration
-from an unreviewed upstream Inspektor Gadget tree.
+Do not rewrite canonical module paths. Acceptance used upstream commit
+`b6dce71343f02269051fdea4e0d463d72c1d5310`; current upstream IG may also be
+used.
 
 ## Record an exact build
 
@@ -30,7 +31,7 @@ Also record:
 - Go and Python versions;
 - operating-system and kernel versions;
 - BPF LSM and cgroup-v2 availability;
-- the owner IG executable SHA-256;
+- the IG executable SHA-256;
 - the gadget OCI archive SHA-256;
 - the gadget manifest digest configured in guardd and Orka;
 - rendered Kubernetes manifest digests; and
@@ -38,14 +39,14 @@ Also record:
 
 The worktrees must be clean. A dirty build is not the same candidate.
 
-## Local owner-fork selection
+## Local IG selection
 
 For Go host tests, create a local workspace:
 
 ```bash
-go work init ./ig-kmx-guardd-public/gadget ./inspektor-gadget-public
+go work init ./ig-kmx-guardd-public/gadget ./inspektor-gadget
 go work edit \
-  -replace=github.com/inspektor-gadget/inspektor-gadget@v0.0.0=./inspektor-gadget-public
+  -replace=github.com/inspektor-gadget/inspektor-gadget@v0.0.0=./inspektor-gadget
 ```
 
 For an image builder that cannot see the parent workspace, use a temporary

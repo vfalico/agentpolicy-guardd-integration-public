@@ -37,16 +37,17 @@ policy is rejected rather than approximated.
 Use the branch `agentpolicy-kmx-orka-ig-guardd-current` unless a later release
 names a different integration branch.
 
-The immutable source identities for this candidate are recorded in
-[`release-manifest.json`](release-manifest.json). Clone the branch for
-discoverability, then check out the exact commit before building.
+The immutable integration identities and the upstream IG version used for
+acceptance are recorded in [`release-manifest.json`](release-manifest.json).
+Clone the branch for discoverability, then check out the exact integration
+commits before building.
 
 | Repository | Role |
 |---|---|
 | `vfalico/kaimahi-public` | validates and renders the portable policy and binding |
 | `vfalico/orka-public` | resolves policy identity, holds provider startup, verifies receipts, and gates prompt dispatch |
 | `vfalico/ig-kmx-guardd-public` | privileged node service, fail-safe guardian, signed evidence, and BPF LSM gadget |
-| `vfalico/inspektor-gadget-public` | owner-controlled IG build with canonical Go module paths |
+| `inspektor-gadget/inspektor-gadget` | upstream IG build; the acceptance-tested commit is recorded in the release manifest |
 | `vfalico/agentpolicy-guardd-integration-public` | architecture, installation, testing, and reproducibility guide |
 
 Start with:
