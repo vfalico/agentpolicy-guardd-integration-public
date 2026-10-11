@@ -14,9 +14,9 @@ git clone --branch "$branch" https://github.com/vfalico/ig-kmx-guardd-public.git
 git clone https://github.com/vfalico/inspektor-gadget-public.git
 
 git -C kaimahi-public checkout \
-  e3c54bf061a03a6d0e58a6fa254ac4215ea22976
+  fddda19046bff9b97244c4fbde2b01d8123b086a
 git -C orka-public checkout \
-  cbfb9e34e89ffdd2d4d3aaf62f707e9f41a82e7d
+  95effe76f9378b991c97cb86a3d753634afe9004
 git -C ig-kmx-guardd-public checkout \
   f0df7157d164959e21831218475b5e174814ed72
 git -C inspektor-gadget-public checkout \

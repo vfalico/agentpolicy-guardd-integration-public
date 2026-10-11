@@ -3,16 +3,16 @@
   "branch": "agentpolicy-kmx-orka-ig-guardd-current",
   "repositories": {
     "vfalico/kaimahi-public": {
-      "commit": "e3c54bf061a03a6d0e58a6fa254ac4215ea22976",
-      "tree": "806a010f511400e257b56976a100ebef95e667e9",
-      "implementationCommit": "e3c54bf061a03a6d0e58a6fa254ac4215ea22976",
-      "implementationTree": "806a010f511400e257b56976a100ebef95e667e9"
+      "commit": "fddda19046bff9b97244c4fbde2b01d8123b086a",
+      "tree": "cbe8be27dc6f434861a1ddb2fb6d954a30767971",
+      "implementationCommit": "fddda19046bff9b97244c4fbde2b01d8123b086a",
+      "implementationTree": "cbe8be27dc6f434861a1ddb2fb6d954a30767971"
     },
     "vfalico/orka-public": {
-      "commit": "cbfb9e34e89ffdd2d4d3aaf62f707e9f41a82e7d",
-      "tree": "02d670cd845f213131335c00aa38fe885daa8150",
-      "implementationCommit": "cbfb9e34e89ffdd2d4d3aaf62f707e9f41a82e7d",
-      "implementationTree": "02d670cd845f213131335c00aa38fe885daa8150"
+      "commit": "95effe76f9378b991c97cb86a3d753634afe9004",
+      "tree": "ddfbabc4dde9b16614f84a496f98a7b989344b70",
+      "implementationCommit": "95effe76f9378b991c97cb86a3d753634afe9004",
+      "implementationTree": "ddfbabc4dde9b16614f84a496f98a7b989344b70"
     },
     "vfalico/ig-kmx-guardd-public": {
       "commit": "f0df7157d164959e21831218475b5e174814ed72",
