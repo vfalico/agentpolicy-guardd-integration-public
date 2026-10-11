@@ -15,10 +15,10 @@
       "implementationTree": "ddfbabc4dde9b16614f84a496f98a7b989344b70"
     },
     "vfalico/ig-kmx-guardd-public": {
-      "commit": "f0df7157d164959e21831218475b5e174814ed72",
-      "tree": "874edbbfe9af94b5a6fd70f650387f18ab9e30c8",
-      "implementationCommit": "de8b24619cfd94a7cbc9d5f711911a3d800faa15",
-      "implementationTree": "106b2eeb269f2e244326f725e03e1a4927a20d36"
+      "commit": "ef98009996846e3b54496a6d4061b234ac94c0a6",
+      "tree": "c0928f995e91fe4f395591e5330165c9d07dc538",
+      "implementationCommit": "ef98009996846e3b54496a6d4061b234ac94c0a6",
+      "implementationTree": "c0928f995e91fe4f395591e5330165c9d07dc538"
     },
     "vfalico/inspektor-gadget-public": {
       "commit": "b6dce71343f02269051fdea4e0d463d72c1d5310",

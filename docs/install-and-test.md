@@ -18,7 +18,7 @@ git -C kaimahi-public checkout \
 git -C orka-public checkout \
   95effe76f9378b991c97cb86a3d753634afe9004
 git -C ig-kmx-guardd-public checkout \
-  f0df7157d164959e21831218475b5e174814ed72
+  ef98009996846e3b54496a6d4061b234ac94c0a6
 git -C inspektor-gadget-public checkout \
   b6dce71343f02269051fdea4e0d463d72c1d5310
 ```
