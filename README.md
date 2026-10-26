@@ -1,5 +1,12 @@
 # AgentPolicy, KMX, Orka, guardd, and Inspektor Gadget integration
 
+> **Historical integration (superseded).** Use the
+> [Guardd 2 review, build and qualification guide](https://github.com/vfalico/guardd-2-integration-public)
+> and its pinned `guardd-2` source branches for the current combined
+> filesystem/network integration. This repository preserves the earlier
+> AgentPolicy/IG design and evidence; its APIs and qualification are not
+> interchangeable with the replacement. The original documentation follows.
+
 This repository explains a fail-closed path from a portable agent policy to a
 kernel-enforced workload boundary:
 
